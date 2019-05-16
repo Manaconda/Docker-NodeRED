@@ -19,6 +19,9 @@ USER node-red
 COPY package.json /usr/src/node-red/
 RUN npm install
 
+#
+RUN apk update \
+    && apk add openssh
 # User configuration directory volume
 VOLUME ["/data"]
 EXPOSE 1880
