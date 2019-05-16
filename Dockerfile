@@ -13,15 +13,16 @@ RUN adduser -h /usr/src/node-red -D -H node-red \
     && chown -R node-red:node-red /data \
     && chown -R node-red:node-red /usr/src/node-red
 
+#
+RUN apk update \
+    && apk add openssh
+
 USER node-red
 
 # package.json contains Node-RED NPM module and node dependencies
 COPY package.json /usr/src/node-red/
 RUN npm install
 
-#
-RUN apk update \
-    && apk add openssh
 # User configuration directory volume
 VOLUME ["/data"]
 EXPOSE 1880
