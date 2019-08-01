@@ -1,6 +1,7 @@
 # Docker-NodeRED
 
-Node-RED running on node 8 - when updating get new package.json from here
+Node-RED +
 
-https://github.com/node-red/node-red-docker
+IPMITOOL
+
 
