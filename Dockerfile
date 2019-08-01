@@ -1,3 +1,3 @@
 FROM nodered/node-red-docker:latest
-
-RUN apt update && apt install ipmitool
+USER root
+RUN apt-get update && apt-get install ipmitool
